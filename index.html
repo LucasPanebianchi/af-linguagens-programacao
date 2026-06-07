@@ -2,9 +2,9 @@
 AF - Avaliação Final - Linguagens de Programação
 Tema do Projeto: AutoPrime Motors
 Aluno 1: Lucas Panebianchi Antunes - RA: XXXXX
-Aluno 2: Alex - RA: XXXXX
+Aluno 2: ALEXANDER DA SILVA FERNANDES - RA: XXXXX
 Professor: Abimael de Oliveira
-
+Data de entrega: 07/06
 -->
 
 <!DOCTYPE html>
@@ -12,36 +12,356 @@ Professor: Abimael de Oliveira
 <head>
     <meta charset="UTF-8">
 
-    <!-- Permite que a página se adapte a celulares. -->
+    <!-- Faz a página se adaptar ao celular. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AutoPrime Motors - Home</title>
 
-    <!-- Conecta o arquivo CSS externo. -->
+    <!-- Bootstrap. -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS externo na mesma pasta. -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>AutoPrime Mots</h1>
+        <!-- Menu responsivo usando Bootstrap. -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    AutoPrime Motors
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">
+                                Galeria
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">
+                                Contato
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <button
+                                type="button"
+                                id="btnTema"
+                                class="btn btn-outline-light btn-sm"
+                            >
+                                Alterar tema
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Projeto em desenvolvimento</h2>
 
-            <p>
-                Esta página será finalizada no segundo commit,
-                com menu, carrossel e seções de destaque.
-            </p>
+        <!-- Carrossel obrigatório com três imagens. -->
+        <section class="carrossel">
+
+            <div
+                id="carouselHome"
+                class="carousel slide"
+                data-bs-ride="carousel"
+            >
+
+                <div class="carousel-indicators">
+
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="0"
+                        class="active"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="1"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="2"
+                    ></button>
+
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <img
+                            src="img/banner-01.jpg"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Carro esportivo em uma estrada"
+                        >
+
+                        <div class="carousel-caption">
+                            <h1>AutoPrime Motors</h1>
+
+                            <p>
+                                Novidades e informações do mundo automotivo.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <img
+                            src="img/banner-02.jpg"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Interior de um carro moderno"
+                        >
+
+                        <div class="carousel-caption">
+                            <h2>Tecnologia</h2>
+
+                            <p>
+                                Conheça os recursos dos carros modernos.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <img
+                            src="img/banner-03.jpg"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Carro moderno na cidade"
+                        >
+
+                        <div class="carousel-caption">
+                            <h2>Lançamentos</h2>
+
+                            <p>
+                                Veja alguns destaques do mercado automotivo.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselHome"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselHome"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
         </section>
+
+        <!-- Apresentação do projeto. -->
+        <section class="sobre">
+
+            <div class="container">
+
+                <h2>Sobre o projeto</h2>
+
+                <p>
+                    O AutoPrime Motors é um site acadêmico sobre carros,
+                    tecnologias, novidades e lançamentos automotivos.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Cards principais. -->
+        <section class="destaques">
+
+            <div class="container">
+
+                <h2>Principais destaques</h2>
+
+                <div class="area-cards">
+
+                    <article class="card">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Performance
+                            </h3>
+
+                            <p class="card-text">
+                                Modelos desenvolvidos para entregar potência
+                                e uma melhor experiência de direção.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Tecnologia
+                            </h3>
+
+                            <p class="card-text">
+                                Conectividade, segurança e assistência
+                                para o motorista.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Sustentabilidade
+                            </h3>
+
+                            <p class="card-text">
+                                Carros elétricos e soluções que reduzem
+                                o consumo de combustível.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Chamadas para as outras páginas. -->
+        <section class="chamadas">
+
+            <div class="container area-chamadas">
+
+                <article class="bloco-chamada">
+
+                    <h2>Galeria</h2>
+
+                    <p>
+                        Conheça carros, modelos e lançamentos.
+                    </p>
+
+                    <a href="galeria.html" class="btn btn-primary">
+                        Ver galeria
+                    </a>
+
+                </article>
+
+                <article class="bloco-chamada">
+
+                    <h2>Contato</h2>
+
+                    <p>
+                        Envie uma mensagem para nossa equipe.
+                    </p>
+
+                    <a href="contato.html" class="btn btn-dark">
+                        Entrar em contato
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
 
     <footer>
-        <p>Projeto acadêmico - 2026</p>
+
+        <div class="container area-rodape">
+
+            <div>
+                <h2>AutoPrime Motors</h2>
+
+                <p>
+                    Projeto acadêmico de Linguagens de Programação.
+                </p>
+            </div>
+
+            <div>
+                <p>Lucas Panebianchi Antunes - RA: 251159</p>
+                <p>ALEXANDER DA SILVA FERNANDES - RA: XXXXX</p>
+            </div>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+        </div>
+
+        <p class="direitos">
+            2026 - Projeto acadêmico sem fins comerciais.
+        </p>
+
     </footer>
 
-    <!-- Conecta o arquivo JavaScript externo. -->
+    <!-- Botão controlado pelo JavaScript. -->
+    <button type="button" id="btnTopo">
+        Topo
+    </button>
+
+    <!-- JavaScript do Bootstrap para funcionamento responsivo. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript externo na mesma pasta. -->
     <script src="script.js"></script>
+
 </body>
 </html>
