@@ -47,7 +47,7 @@ const formulario = document.querySelector('#formContato');
 if (formulario) {
     formulario.addEventListener('submit', function(event) {
 
-        <-impede o formulário de tentar enviar os dados.->
+       // <-impede o formulário de tentar enviar os dados.->
         event.preventDefault();
 
         const nome = document.querySelector('#nome').value.trim();
@@ -60,5 +60,42 @@ if (formulario) {
             alert('Mensagem enviada com sucesso!');
             formulario.reset();
         }
+    });
+}
+
+// ========== FUNCIONALIDADES DA GALERIA ==========
+
+// 4. Filtros da galeria (só executa se existir na página)
+const botoesFiltro = document.querySelectorAll('.btn-filtro');
+const veiculos = document.querySelectorAll('.veiculo-card');
+
+if (botoesFiltro.length > 0 && veiculos.length > 0) {
+    botoesFiltro.forEach(botao => {
+        botao.addEventListener('click', function() {
+            // Remove a classe 'ativo' de todos os botões
+            botoesFiltro.forEach(btn => btn.classList.remove('ativo'));
+            
+            // Adiciona a classe 'ativo' ao botão clicado
+            this.classList.add('ativo');
+            
+            const categoria = this.getAttribute('data-categoria');
+            
+            // Filtra os veículos com animação
+            veiculos.forEach(veiculo => {
+                if (categoria === 'todos' || veiculo.getAttribute('data-categoria') === categoria) {
+                    veiculo.style.display = 'block';
+                    setTimeout(() => {
+                        veiculo.style.opacity = '1';
+                        veiculo.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    veiculo.style.opacity = '0';
+                    veiculo.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        veiculo.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
     });
 }

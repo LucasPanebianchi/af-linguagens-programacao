@@ -1,6 +1,6 @@
 # af-linguagens-programacao
 
-# !nome do projeto! 
+# !Auto Prime Motors! 
 
 # tema 
 
@@ -8,8 +8,8 @@ Site fictício sobre carros, novidades e lançamentos automotivos
 
 # Integrantes
 
-* Lucas Panebianchi Antunes - RA: XXXXX
-* Nome do segundo integrante - RA: XXXXX
+* Lucas Panebianchi Antunes - RA: 251159
+* Alexander da Silva Fernandes - RA: 251070
 
 # Páginas
 
@@ -35,6 +35,10 @@ Formulário de contato
 Mapa incorporado
 Responsividade
 Interações com JavaScript
+Grid de veículos
+Badges personalizados
+Efeito hover nos cards
+Adaptabilidade para mobile
 
 ## Link do repositório
 
