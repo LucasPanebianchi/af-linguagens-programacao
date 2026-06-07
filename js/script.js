@@ -2,8 +2,8 @@
 /*
 AF - Avaliação Final - Linguagens de Programação
 Tema do Projeto: AutoPrime Motors
-Aluno 1: Lucas Panebianchi Antunes - RA: XXXXX
-Aluno 2: ALEXANDER DA SILVA FERNANDES - RA: XXXXX
+Aluno 1: Lucas Panebianchi Antunes - RA: 251159
+Aluno 2: Alexander da Silva Fernandes - RA: 251070
 Professor: Abimael de Oliveira
 Data de entrega: 07/06
 */
