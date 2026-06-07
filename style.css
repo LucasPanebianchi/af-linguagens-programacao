@@ -2,7 +2,295 @@
 AF - Avaliação Final - Linguagens de Programação
 Tema do Projeto: AutoPrime Motors
 Aluno 1: Lucas Panebianchi Antunes - RA: XXXXX
-Aluno 2: Nome completo - RA: XXXXX
+Aluno 2: ALEXANDER DA SILVA FERNANDES - RA: XXXXX
 Professor: Abimael de Oliveira
 */
 
+
+/* Configuração geral da página. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+    line-height: 1.6;
+    padding-top: 56px;
+}
+
+section {
+    padding: 50px 15px;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+/* Menu. */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Carrossel. */
+.carrossel {
+    padding: 0;
+}
+
+.imagem-carrossel {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Apresentação. */
+.sobre {
+    background-color: white;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Cards usando Flexbox. */
+.destaques h2 {
+    text-align: center;
+}
+
+.area-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 320px;
+    min-height: 200px;
+    border: none;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Área de chamadas usando Flexbox. */
+.area-chamadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.bloco-chamada {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Botões. */
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé. */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 35px 15px 15px;
+}
+
+.area-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Botão de voltar ao topo. */
+#btnTopo {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+}
+
+#btnTopo.mostrar {
+    display: block;
+}
+
+/* Tema escuro ativado pelo JavaScript. */
+.tema-escuro {
+    background-color: #111111;
+    color: white;
+}
+
+.tema-escuro .sobre,
+.tema-escuro .card,
+.tema-escuro .bloco-chamada {
+    background-color: #292929;
+    color: white;
+}
+
+/* Responsividade para celular. */
+@media (max-width: 768px) {
+    .imagem-carrossel {
+        height: 300px;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption h2 {
+        font-size: 22px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .area-cards,
+    .area-chamadas,
+    .area-rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .bloco-chamada {
+        width: 100%;
+    }
+
+    .area-rodape {
+        text-align: center;
+    }
+}
+
+
+<---Pagina de contato ->
+
+```css
+/* Título da página de contato. */
+.titulo-pagina {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 60px 15px;
+}
+
+/* Área principal da página de contato. */
+.contato {
+    background-color: #f4f4f4;
+}
+
+/* Caixa do formulário. */
+.form-contato {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Caixa com telefone, endereço e redes sociais. */
+.informacoes-contato {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Links das redes sociais. */
+.informacoes-contato a {
+    display: block;
+    color: #0d6efd;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.informacoes-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Área do mapa. */
+.localizacao {
+    background-color: white;
+}
+
+.localizacao h2 {
+    text-align: center;
+}
+
+.localizacao iframe {
+    border-radius: 8px;
+}
+
+/* Página de contato no tema escuro. */
+.tema-escuro .contato {
+    background-color: #111111;
+}
+
+.tema-escuro .form-contato,
+.tema-escuro .informacoes-contato,
+.tema-escuro .localizacao {
+    background-color: #292929;
+    color: white;
+}
+
+/* Ajustes para telas menores. */
+@media (max-width: 768px) {
+    .titulo-pagina {
+        padding: 40px 15px;
+    }
+
+    .form-contato,
+    .informacoes-contato {
+        padding: 20px;
+    }
+}
+```

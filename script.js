@@ -1,16 +1,9 @@
-/*
-AF - Avaliação Final - Linguagens de Programação
-Tema do Projeto: AutoPrime Motors
-Aluno 1: Lucas Panebianchi Antunes - RA: XXXXX
-Aluno 2: Nome completo - RA: XXXXX
-Professor: Abimael de Oliveira
-*/
 
 /*
 AF - Avaliação Final - Linguagens de Programação
 Tema do Projeto: AutoPrime Motors
 Aluno 1: Lucas Panebianchi Antunes - RA: XXXXX
-Aluno 2: Nome completo - RA: XXXXX
+Aluno 2: ALEXANDER DA SILVA FERNANDES - RA: XXXXX
 Professor: Abimael de Oliveira
 Data de entrega: 07/06
 */
@@ -53,6 +46,8 @@ const formulario = document.querySelector('#formContato');
 // Verifica os campos antes de enviar.
 if (formulario) {
     formulario.addEventListener('submit', function(event) {
+
+        <-impede o formulário de tentar enviar os dados.->
         event.preventDefault();
 
         const nome = document.querySelector('#nome').value.trim();
